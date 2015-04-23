@@ -1,0 +1,35 @@
+.hero {
+    height: 400px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    background-image: url('../img/bg-new.jpg');
+    overflow: hidden;
+}
+
+.circleBase {
+    border-radius: 50%;
+}
+
+.type3 {
+    width: 200px;
+    height: 150px;
+    /*background: #ffffff;*/
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 0px 20px 8px rgba(119, 119, 119, 0.75);
+    -moz-box-shadow: 0px 0px 20px 8px rgba(119, 119, 119, 0.75);
+    -webkit-box-shadow: 0px 0px 20px 8px rgba(119, 119, 119, 0.75);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}

@@ -1,0 +1,394 @@
+<div ng-controller="ViewPostController">
+    <div class="row">
+        <div class="col s12 m3">
+            <div class="card grey lighten-3">
+                <div class="card-content white-text">
+                    <span class="card-title"><b>Categories</b></span>
+
+                    <p style="color: #000000">
+                        <a href="">(ˢᵒᶜⁱᵉᵗʸlog) {{5+5}}</a>
+                        <a href="">(ˢᵒᶜⁱᵉᵗʸserver)</a>
+                        <a href="">(ˢᵒᶜⁱᵉᵗʸtask)</a>
+                        <a href="">Chandler </a>
+                        <a href="">angular.js</a>
+                        <a href="">coding-for-fun</a>
+                        <a href="">nReduce</a>
+                        <a href="">user-interface</a>
+                        <a href="">multi-language</a>
+                        <a href="">pike</a>
+                        <a href="">xiamen</a>
+                        <a href="">virtual hosting</a>
+                        <a href="">sTeam</a>
+                        <a href="">hackerspace</a>
+                        <a href="">cordova</a>
+                        <a href="">css</a>
+                        <a href="">html</a>
+                        <a href="">stylesheets</a>
+                        <a href="">jquery</a>
+                        <a href="">python</a>
+                        <a href="">node.js</a>
+                    </p>
+                </div>
+            </div>
+            <!--New Featured -->
+            <div class="card grey lighten-3" style="height: auto;">
+                <div class="card-content white-text">
+                    <span class="card-title"><b>Featured</b></span>
+
+                    <p style="color: #000000">
+                        <a href="">How to install sTeam quick notes</a><br>
+                        <a href="">Interface elements for Document Management</a><br>
+                        <a href="">Multi language documents</a><br>
+                        <a href="">About email task management </a><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--new-->
+        <div class="col s12 m9">
+
+            <div>
+                <div class="card">
+                    <br>
+                        <span class="card-title"
+                              style="text-align: center">Featured Post - Google Material Design</span>
+
+                    <div class="card-image">
+                        <br>
+                        <img src="lib/img/Google_Design.png">
+                    </div>
+                    <div class="card-content">
+                        <p>We challenged ourselves to create a visual language for our users that synthesizes the
+                            classic principles
+                            of good design with the innovation and possibility of technology and science. This is
+                            material design.
+                            This spec is a living document that will be updated as we continue to develop the tenets
+                            and
+                            specifics
+                            of material design.
+                            Create a visual language that synthesizes classic principles of good design with the
+                            innovation and
+                            possibility of technology and science.
+                            Develop a single underlying system that allows for a unified experience across platforms
+                            and
+                            device
+                            sizes. Mobile precepts are fundamental, but touch, voice, mouse, and keyboard are all
+                            ﬁrst-class input
+                            methods.
+                        </p>
+                    </div>
+                    <div class="card-action" style="color: #ffffff">
+                        <a class="waves-effect waves-light btn" style="color: #ffffff">View More</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding-left: 10px;padding-right: 10px;">
+
+        <!-- View from sTeam Server-->
+        <div class="card" style="color: #000000">
+
+            <div class="card-content white-text">
+                <span class="card-title"><b>Sample Single text from sTeam Server</b></span>
+
+                <div class="doc_content">
+
+                    <h5 ng-bind="singlePost"></h5>
+
+                </div>
+            </div>
+        </div>
+        <!-- End of sTeam server post view-->
+
+
+        <div class="card" style="color: #000000">
+
+            <div class="card-content white-text">
+                <span class="card-title">How to install sTeam quick notes</span>
+
+                <div class="doc_content"><font size="3">
+                    <div class="maincontent">
+                        <div class='xmlcontent'><p>these are the commands needed to install sTeam from source on
+                            CentOS
+                            6.5</p>
+
+                            <h3>Pike</h3>
+<pre>
+  yum install mysql-server mysql-devel bzip2-devel libjpeg-devel  libpng-devel <br>  zlib-devel pcre-devel freetype-devel gmp-devel make nettle-devel
+  get the <a href='http://pike.lysator.liu.se'>pike source</a> from http://pike.lysator.liu.se
+  unpack...
+  make
+  make install
+</pre>
+                            <h3>sTeam</h3>
+<pre>
+  # get steam 2.9 from git repo
+  git clone http://github.com/ekita/sTeam.git
+  cd sTeam
+  git checkout steam-2.9-source
+  # get <a href='http://web.archive.org/web/http://steamware.open-steam.org/Webinterface/download/web-2_2_17.spm'>webinterface</a>
+    http://web.archive.org/web/http://steamware.open-steam.org/Webinterface/download/web-2_2_17.spm
+  # (the repo version does not work!)
+  # patch line 101 in server/libraries/Test.pmod
+  # line should be "object first_test = TestCard( obj, obj-&gt;test, 0, 0);"
+  yum install libxml2-devel libxslt-devel automake
+  /etc/init.d/mysqld start
+  ./build
+  ./install
+  # start the server:
+  /usr/local/lib/steam/start
+
+  # install the webinterface with the spm tool:
+  /usr/local/lib/steam/bin/spm -i web-2_2_17.spm
+
+  # <a href='https://localhost/'>login</a> at https://localhost/ (username "root", password "steam")
+
+  # optional: set up your system to start sTeam automatically
+  chkconfig --add steam
+  chkconfig steam on
+</pre>
+
+                            <p>at this point you should have a running server</p>
+
+                            <p>for other linux distributions you may need to adapt the package names, and you may
+                                also run
+                                into versioning issues with regards to libxml and libxslt. in future versions i
+                                intend to
+                                remove the libxml/libxslt support. (pike itself has xml support for your development
+                                needs.
+                                libxml is only needed for libxslt, and i want to remove the latter.)</p></div>
+                    </div>
+                </font></div>
+
+            </div>
+            <div class="card-action" style="color: #ffffff">
+                <a class="waves-effect waves-light btn" style="color: #ffffff">View More</a>
+                <a class="waves-effect waves-light btn" style="color: #ffffff">Stuff</a>
+            </div>
+        </div>
+        <!--new card-->
+        <div class="card" style="color: #000000">
+            <div class="card-content white-text">
+                <span class="card-title">Multi language documents</span>
+
+                <p>
+                    sTeams way of handling multiple languages for a document currently works like this:
+
+                    First, multi-language support needs to be configured by a sTeam administrator by specifying
+                    which
+                    languages are to be supported in the multilanguage_languages attribute on the admin group
+                    object.
+                    Once that is active, containers and rooms show an option to configure them as multi-language
+                    containers. If this is activated you are able to select a document in the container for each
+                    language that was configured above on the admin group.
+
+                    This is rather suboptimal. Different pages may want to support a different set of languages.
+                    There
+                    is nothing in offering a certain set of languages that would require admin intervention. The
+                    above
+                    language list could be a hardcoded list covering all languages on the planet for example, but
+                    then
+                    we'd get a long list of languages to select in each container.
+
+                    The next problem is that, in order to select a document for a language, the document needs to
+                    exist.
+                    So, first you need to create a document for a language, then go to the language setting for the
+                    container and select that document. And then better don't try to move the document into another
+                    container...
+
+                    A better approach might be the following:
+
+                    Throw away the admin setting. Just allow any container to be configured for multi-language use
+                    regardless. Then for each document or object even, specify its language, just like you currently
+                    specify the content-type. That language can then be reflected in the documents icon.
+
+                    Optionally, if the container is a multi-language container then register the document with the
+                    container as the index document for that language.
+
+                    With multiple languages, one document should be marked as the original. This document could then
+                    be
+                    used as a fallback if no suitable language is found. It would also allow marking other languages
+                    as
+                    up-to-date or not, as those should be newer.
+
+                    Next, we need to decide if there should only be one document per language allowed, or multiple
+                    ones.
+                    The later might simplify some
+
+                <div class="doc_content"><font size="3">
+                    <div class="maincontent">
+                        <div class='xmlcontent'><h3>sTeams way of handling multiple languages for a document
+                            currently works
+                            like this:</h3>
+
+                            <p>
+                                First, multi-language support needs to be configured by a sTeam administrator by
+                                specifying
+                                which languages are to be supported in the <tt>multilanguage_languages</tt>
+                                attribute on the
+                                <tt>admin</tt> group object. Once that is active, containers and rooms show an
+                                option to
+                                configure them as multi-language containers. If this is activated you are able to
+                                select a
+                                document in the container for each language that was configured above on the admin
+                                group.
+                            </p>
+
+                            <p>
+                                This is rather suboptimal. Different pages may want to support a different set of
+                                languages.
+                                There is nothing in offering a certain set of languages that would require admin
+                                intervention. The above language list could be a hardcoded list covering all
+                                languages on
+                                the planet for example, but then we'd get a long list of languages to select in each
+                                container.
+                            </p>
+
+                            <p>
+                                The next problem is that, in order to select a document for a language, the document
+                                needs
+                                to exist. So, first you need to create a document for a language, then go to the
+                                language
+                                setting for the container and select that document. And then better don't try to
+                                move the
+                                document into another container...
+                            </p>
+
+                            <h3>A better approach might be the following:</h3>
+
+                            <p>
+                                Throw away the admin setting. Just allow any container to be configured for
+                                multi-language
+                                use regardless. Then for each document or object even, specify its language, just
+                                like you
+                                currently specify the content-type. That language can then be reflected in the
+                                documents
+                                icon.
+                            </p>
+
+                            <p>
+                                Optionally, if the container is a multi-language container then register the
+                                document with
+                                the container as the index document for that language.
+                            </p>
+
+                            <p>
+                                With multiple languages, one document should be marked as the original. This
+                                document could
+                                then be used as a fallback if no suitable language is found. It would also allow
+                                marking
+                                other languages as up-to-date or not, as those should be newer.
+                            </p>
+
+                            <p>
+                                Next, we need to decide if there should only be one document per language allowed,
+                                or
+                                multiple ones. The later might simplify some things, but complicate others, such as
+                                a
+                                translation interface which would need to differentiate which documents in each
+                                language are
+                                related. This question relates to the more general question of handling multi-part
+                                documents. A multi-part document would be a container with multiple documents inside
+                                which
+                                make up various parts, such as header, footer, sections, pictures, etc...
+                            </p>
+
+                            <p>
+                                A multi-part document could be edited with all parts open in a separate text area at
+                                once,
+                                or all parts displayed and each to be made editable with a click. A multi-language
+                                document
+                                would show the original on top and all other languages below either with tabs or
+                                with an
+                                accordeon style interface opening one language at a time.
+                            </p>
+
+                            <p>
+                                But how would we handle a multi-part and multi-language document? If the multiple
+                                parts are
+                                arranged from top to bottom, languages can be placed side-by-side perhaps? Put the
+                                original
+                                language on the left and select the target language on the right. In the inventory
+                                documents
+                                would be ordered by their appearance for each language.
+                            </p>
+
+                            <h3>How to implement all this?</h3>
+
+                            <ul>
+                                <li>
+                                    Ignore the <tt>multilanguage_languages</tt> attribute and always allow a
+                                    container to be
+                                    configured as multi-language container.
+                                </li>
+
+                                <li>
+                                    Register a language attribute for the Document or even the Object class. <em>(update:
+                                    there already exists a <tt>OBJ_LANGUAGE</tt> attribute that appears suitable, it
+                                    defaults to the language of the user)</em>
+                                </li>
+
+                                <li>Add a field to set the language in the object details.</li>
+
+                                <li>
+                                    Create an interface to edit a multi-language document. Given the above
+                                    consideration
+                                    this should probably be side-by-side even if it is only one document. This would
+                                    also
+                                    help in case the document is very long as you would be able to scroll and keep
+                                    the
+                                    translation always in view with the original.
+                                </li>
+
+                                <li>
+                                    In the admin view a multi-language container should have a direct edit-link to
+                                    not
+                                    require entering the container for editing.
+                                </li>
+
+                                <li>
+                                    When displaying a container with multiple articles, check if any containers
+                                    inside are
+                                    multi-language containers, and pick the appropriate content. Actually this can
+                                    likely be
+                                    done already in the xml generation stage, so that the xsl template does not need
+                                    to deal
+                                    with the multiple languages at all.
+
+                                    <ul>
+                                        <li>
+                                            This can probably be done with a <tt>get_content()</tt> like function
+                                            that calls
+                                            <tt>get_content()</tt> on the appropriate language. For a multi-part
+                                            document,
+                                            this would have to concatenate the parts.
+                                        </li>
+
+                                        <li>
+                                            Ideally, a multi-language container would be able to look like a
+                                            document in the
+                                            xml structure. Can we do that? <em>(update: if there is only one object
+                                            per
+                                            language we can probably handle this in <tt>get_public_inventory()</tt>
+                                            by just
+                                            returning the appropriate document instead of a container.</em>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>For a log, order the articles by container-creation time</li>
+                            </ul>
+                        </div>
+                    </div>
+                </font></div>
+            </div>
+            <div class="card-action" style="color: #ffffff">
+                <a class="waves-effect waves-light btn" style="color: #ffffff">View More</a>
+                <a class="waves-effect waves-light btn" style="color: #ffffff">Stuff</a>
+            </div>
+        </div>
+    </div>
+</div>

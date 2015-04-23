@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html ng-app="sTeam">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Home | sTeam Public</title>
+
+    <!-- Adding Text Angular CSS-->
+    <!--<link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet"-->
+    <!--href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>-->
+    <link data-require="font-awesome@*" data-semver="4.3.0" rel="stylesheet"
+          href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <!--<link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet"-->
+    <!--href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/angular.textangular/1.3.7/textAngular.css"/>
+    <!-- End of CSS-->
+
+    <link href="lib/css/materialize.css" rel="stylesheet">
+    <link href="lib/css/Home.css" rel="stylesheet">
+</head>
+<body bgcolor="#efefef">
+
+<div>
+    <div class="navbar-fixed" ng-controller="MainMenuController">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Training</a></li>
+            <li><a href="#!">Academic</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">More</a></li>
+        </ul>
+
+        <nav class="grey darken-3">
+            <div class="nav-wrapper">
+                <a style="padding-left: 20px;" href="#/" class="brand-logo">
+                    Society Server Project</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="">Society Log</a></li>
+                    <li><a href="">Dev-Log</a></li>
+                    <li><a href="">Society Task</a></li>
+                    <li><a href="">nReduce</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Pike Workshops<i
+                            class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                    <li ng-show="showNewPost"><a href="#/newPost">New Post</a></li>
+                    <li><a href="" ng-click="viewNewPost()">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="hero">
+        <div class="container" style="text-align: center ; color: #ffffff;text-shadow: 3px 6px 0 #000;">
+            <br>
+
+            <div class="circleBase type3">
+                <img src="lib/img/society-server-logo.png" alt="logo">
+            </div>
+
+            <h1>Society Server</h1>
+            <h5>Your platform to serve society , your community and your customer</h5>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="row" style="background-color:#dbdbdb ">
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/angular.png">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/cordovaOriginal.jpg">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/css3-logo.png">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/html5.png">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/js_logo.png">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/UX.png">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/angular.png">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/cordovaOriginal.jpg">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/css3-logo.png">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/html5.png">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/js_logo.png">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m1">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="lib/img/ribbon/UX.png">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Adding ng-view to the Angular System-->
+    <ng-view>
+
+    </ng-view>
+
+    <!--Adding Footer-->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                        content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2015 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Enter Login Details</h4>
+
+        <form>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Login
+            <i class="mdi-content-send right"></i>
+        </button>
+    </div>
+</div>
+<!--End of Modal Structure-->
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+
+<!--Adding text angualt js-->
+<script data-require="bootstrap@*" data-semver="3.3.2"
+        src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="http://cdn.jsdelivr.net/g/angular.textangular@1.3.7(textAngular-rangy.min.js+textAngular-sanitize.min.js+textAngular.min.js)"></script>
+
+<!--End of text angular-->
+
+<script src="lib/js/materialize.js" type="text/javascript"></script>
+
+<!--Adding Custom JavaScript-->
+
+<script src="app/main.js" type="text/javascript"></script>
+<script src="app/url.js" type="text/javascript"></script>
+
+<!--Adding System Controller-->
+<script src="app/controller/publish/AddNewPostController.js"></script>
+<script src="app/controller/main_menu/MainMenuController.js"></script>
+<script src="app/controller/viewPost/ViewPostController.js"></script>
+<script src="app/controller/registration/RegistrationController.js"></script>
+<script src="app/controller/events/EventController.js"></script>
+
+
+<!--Adding system services to connect with sTeam Server-->
+<script src="app/service/post/PostService.js" type="text/javascript"></script>
+<script src="app/service/event/EventService.js" type="text/javascript"></script>
+<script src="app/service/user_management/RegistrationService.js" type="text/javascript"></script>
+
+<script>
+    $(".dropdown-button").dropdown();
+</script>
+
+</body>
+</html>
